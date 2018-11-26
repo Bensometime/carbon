@@ -1,0 +1,36 @@
+"There was an idea called something unimportant. The idea was to bring together
+a group of remarkable people (read: 2 remarkable people and an absolute
+amateur), see if they could become something more. See if they could work
+together when they felt like it to make some really shiny things."
+-[redacted] probably
+
+Project Carbon is a plan to investigate and develop a system for locally
+controlled RGB LEDs for the eventual purpose of producing a real version
+of Joy's mask from Payday 2.
+
+Goals of Carbon:
+  Create a script/device image which runs on a raspberry pi zero w
+    This hardware was selected based on wireless capability and size
+      wireless for resons detailed below
+
+      size as Carbon is meant to be implementable in a variety of form factors
+      the chip is small, making mounting trivial
+
+  Enable the device to act as a local access point while also running
+  a set of lights
+
+  Enable the device to respond, likely via http requests, to remote control
+  via the aforementioned access point
+    if using http requests, flask seems like a good way to receive requests
+
+    for initial testing, perhaps have a set of pregenerated patterns that the
+    user can select from via requests
+      e.g "red" for red, etc.
+
+  Enable the remote user to adjust the color of lights
+
+Stretch goals
+  Create an android app to allow easy mobile configuration of lights
+
+  Create a pattern editor (in the app) to allow for easy configuration
+
