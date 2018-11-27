@@ -6,12 +6,14 @@ together when they felt like it to make some really shiny things."
 
 Project Carbon is a plan to investigate and develop a system for locally
 controlled RGB LEDs for the eventual purpose of producing a real version
-of Joy's mask from Payday 2.
+of Joy's mask from Payday 2. In the long term this project aims to develop a
+project-agnostic system for controlling RGB LEDs suitable for any number of
+purposes
 
 Goals of Carbon:
   Create a script/device image which runs on a raspberry pi zero w
     This hardware was selected based on wireless capability and size
-      wireless for resons detailed below
+      wireless for reasons detailed below
 
       size as Carbon is meant to be implementable in a variety of form factors
       the chip is small, making mounting trivial
@@ -34,3 +36,13 @@ Stretch goals
 
   Create a pattern editor (in the app) to allow for easy configuration
 
+
+Would it be necessary to break the app into a flask server parsing commands
+and a script running the light control?
+
+processid of currently running script can be found using os.getpid()
+
+can restart script using a bash script that kills the process then calls
+the script again
+/src/undead contains an implementation of this concept that would be suitable
+for rebooting the server
