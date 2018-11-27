@@ -46,3 +46,9 @@ can restart script using a bash script that kills the process then calls
 the script again
 /src/undead contains an implementation of this concept that would be suitable
 for rebooting the server
+
+python requires root to access gpio
+
+the neopixel library should do an excellent job for rendering patterns,
+with auto_update (in the actual neopixel object) disabled it will only
+update when asked
