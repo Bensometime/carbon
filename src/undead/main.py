@@ -2,6 +2,8 @@ import os
 import time
 
 from flask import Flask
+from flask import request
+
 app = Flask(__name__)
 
 def testboi():
@@ -27,6 +29,6 @@ def testguy():
     testboi()
     return "wat"
 
-@app.rout('/color/<color>')
-
-time.sleep(2)
+@app.route('/color/<color>')
+def returnlist(color):
+    return color
