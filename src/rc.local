@@ -1,0 +1,3 @@
+cd /home/pi/carbon
+sudo -H -u pi git pull
+sudo -H -u pi /usr/bin/python3 /home/pi/carbon/src/pixeltest/bootflash.py &

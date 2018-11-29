@@ -37,12 +37,12 @@ def testguy():
 @app.route('/color/<color>')
 def redtoggle(color):
     print("requested " + color)
-    if(color == 'red')
+    if color == 'red':
         print("turning lights red")
         pixels[0] = (255,0,0)
         pixels[1] = (255,0,0)
         pixels[2] = (255,0,0)
-    if(color != 'red')
+    if color != 'red':
         print("turning lights off from /red")
         pixels[0] = (0,0,0)
         pixels[1] = (0,0,0)
@@ -55,4 +55,4 @@ def turnoff():
     pixels[0] = (0,0,0)
     pixels[1] = (0,0,0)
     pixels[2] = (0,0,0)
-    return "turning off";    
+    return "turning off";
