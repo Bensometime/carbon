@@ -1,19 +1,20 @@
 import board
 import neopixel
 import time
+import sys
 
-pixels = neopixel.NeoPixel(board.D18, 30)
+red =	int(sys.argv[1])
+green =	int(sys.argv[2])
+blue =	int(sys.argv[3])
 
-while True:
+pixels = neopixel.NeoPixel(board.D18, 32)
 
-    pixels[0] = (255,0,0)
-    pixels[1] = (0,255,0)
-    pixels[2] = (0,0,255)
+i = 0
 
-    time.sleep(3)
+while i != 31:
+    pixels[i] = (red, green, blue)
+    i = i+1
 
-    pixels[0] = (0,0,0)
-    pixels[1] = (0,0,0)
-    pixels[2] = (0,0,0)
-    
-    time.sleep(3)
+time.sleep(5)
+
+pixels.fill((0,0,0))

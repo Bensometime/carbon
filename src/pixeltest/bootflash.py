@@ -6,7 +6,7 @@ import time
 pixels = neopixel.NeoPixel(board.D18, 30)
 
 
-time.sleep(8)
+time.sleep(3)
 
 pixels[0] = (255,0,0)
 pixels[1] = (255,0,0)
