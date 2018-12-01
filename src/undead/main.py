@@ -1,7 +1,7 @@
 import os
 import time
 import board
-import NeoPixel
+import neopixel
 import webcolors
 
 pixels = neopixel.NeoPixel(board.D18, 30)
