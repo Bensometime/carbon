@@ -61,3 +61,5 @@ def parseinput(input):
 
 def getcolor():
     newcolor = webcolors.rgb_to_name(pixels[0][0], pixels[0][1], pixels[0][2])
+
+app.run('0.0.0.0')
