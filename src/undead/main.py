@@ -49,9 +49,11 @@ def green():
 @app.route('/color/<input>', methods=['GET','POST'])
 def color(input):
     if request.method == 'POST':
-        parseinput(input)
+        pixels.fill(parseinput(input))
         return input
     if request.method == 'GET':
+        #this is a standin because I don't have an app to test the real
+        #http request style with (yet)
         parseinput(input)
         #done: make this return the pixel states
         return getcolor()
@@ -64,7 +66,7 @@ def color(input):
 #to the parsed color
 def parseinput(input):
     newcolor = webcolors.name_to_rgb(input)
-    pixels.fill((newcolor.red, newcolor.green, newcolor.blue))
+    return (newcolor.red, newcolor.green, newcolor.blue)
 
 def getcolor():
     newcolor = webcolors.rgb_to_name((pixels[0][0], pixels[0][1], pixels[0][2]))
