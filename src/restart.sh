@@ -1,4 +1,4 @@
 #!/bin/bash
 
 pkill -f flask
-sudo python3 main.py
+sudo python3 cserver.py
