@@ -1,4 +1,4 @@
 #!/bin/bash
 
 pkill -f flask
-flask run
+sudo python3 main.py
