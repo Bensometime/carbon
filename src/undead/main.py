@@ -54,7 +54,11 @@ def color(input):
     if request.method == 'GET':
         #this is a standin because I don't have an app to test the real
         #http request style with (yet)
+<<<<<<< HEAD
         pixels.fill(parseinput(input))
+=======
+        parseinput(input)
+>>>>>>> b9688cd70e8c2716226f5aabedcdea25308abb7b
         #done: make this return the pixel states
         return getcolor()
         #todo: make parseinput work over post request
