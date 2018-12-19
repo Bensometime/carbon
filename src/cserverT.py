@@ -96,7 +96,7 @@ def allrgb():
         return "set all pixels to given values"
     if request.method == 'POST':
         return "", 201
-        
+
 #my impulse to make this a single mega function for every case should be
 #supressed...
 def parsecolorname(input):
@@ -107,4 +107,4 @@ def getcolor(num):
     newcolor = webcolors.rgb_to_name((pixels[num][0], pixels[num][1], pixels[num][2]))
     return newcolor
 
-app.run('0.0.0.0')
+app.run('0.0.0.0', threaded=True)
