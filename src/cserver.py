@@ -23,12 +23,6 @@ def turnoff():
     pixels.fill((0,0,0))
     return "turning off"
 
-@app.route('/valtest/')
-def valtest():
-    print(request.args.get('red', default = 0, type = int))
-    return 'yes'
-
-
 #this and others may need error checking
 @app.route('/single/off', methods=['GET','POST'])
 def singleoff():

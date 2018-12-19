@@ -52,3 +52,35 @@ python requires root to access gpio
 the neopixel library should do an excellent job for rendering patterns,
 with auto_update (in the actual neopixel object) disabled it will only
 update when asked
+
+12/18/18
+okaaaaaaaay.... how do I api?
+
+frame:
+/restart - restart the python server to apply code changes [post, 0 param]
+/off - turns all lights on the assigned strip off [post, 0 param]
+/single/off - turns off only the specific light [post, 1 param]
+/single/name - parse the given text color and set the given light [post, 2 param]
+/single/rgb - set the rgb values for a given light [post, 4 param]
+/all/name - parse the given text color and set every light [post, 1 param]
+/all/rgb - set the rgb values for every light [post, 3 param]
+/status/all - get the status of every light [get, 0 param]
+/status/single - get the status of a single light [get, 1 param]
+
+/range/* - would this be useful or would the speed of single make it redundant?
+  may be the case that the speed of the pi iterating through each value
+  is faster than setting the values individually
+
+
+Statuses
+restart - done, implemented for test but not using post
+off - done, implemented for test but not using post
+single/off - working, needs error checking
+single/name - working, needs error checking
+single/rgb - working, needs proper error messages
+all/name - working, needs proper error messages and the response codes are
+likely really screwed
+all/rgb - working, needs error messages and general tlc
+
+status/all -
+status/single -
