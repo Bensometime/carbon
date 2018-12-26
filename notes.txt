@@ -82,5 +82,29 @@ all/name - working, needs proper error messages and the response codes are
 likely really screwed
 all/rgb - working, needs error messages and general tlc
 
-status/all -
-status/single -
+status/all - unimplemented
+status/single - unimplemented
+
+12/25/18
+building a (emphasis on simple) webapp that can be used for demos,
+or the pi can serve it as a client controller. Temptation was to
+build a new thing to test it with, but I figure it will be faster
+to implement buttons and the rest for everything that's already
+working rather than make something new and build that into the
+server.
+
+Sooooo...
+restart - single button, bottom of the page if even included
+off - single button, on it's own in a corner, fairly big
+single/off - field and a button. error check here or server-side?
+single/name - 2 fields and button
+single/rgb - 4 fields and button
+all/name - field and button
+all/rgb - 3 fields and button
+status/all - ah.... I guess this could be a text area that updates to show
+             the light status whenever the other functions run?
+status/single - ditto...?
+
+rgb fields are annoyingly redundant and would get cluttered, maybe just have
+3 of those and a name field at the bottom then buttons for each of the functions
+I should do a mockup... Imma do a mockup

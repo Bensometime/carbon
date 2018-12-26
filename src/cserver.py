@@ -96,7 +96,9 @@ def allrgb():
         return "set all pixels to given values"
     if request.method == 'POST':
         return "", 201
-        
+
+
+
 #my impulse to make this a single mega function for every case should be
 #supressed...
 def parsecolorname(input):
